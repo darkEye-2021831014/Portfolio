@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>darkEye // Portfolio Shell</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#0c0e13", "inverse-surface": "#e2e2e9", "on-primary-fixed": "#00201c", "background": "#111318", "on-tertiary": "#002e6a", "on-secondary": "#3c0091", "secondary-fixed": "#e9ddff", "outline-variant": "#3c4947", "on-error": "#690005", "surface-container-high": "#282a2f", "tertiary-container": "#75a3ff", "outline": "#859490", "on-tertiary-fixed-variant": "#004395", "surface-container-low": "#1a1b21", "surface-container": "#1e1f25", "surface-tint": "#4fdbc8", "secondary": "#d0bcff", "tertiary-fixed": "#d8e2ff", "on-tertiary-fixed": "#001a42", "error-container": "#93000a", "on-surface": "#e2e2e9", "surface-variant": "#33353a", "surface": "#111318", "secondary-container": "#571bc1", "on-surface-variant": "#bbcac6", "on-error-container": "#ffdad6", "inverse-on-surface": "#2e3036", "on-secondary-fixed": "#23005c", "on-primary-container": "#00423b", "primary-fixed-dim": "#4fdbc8", "surface-bright": "#37393f", "primary-fixed": "#71f8e4", "on-secondary-fixed-variant": "#5516be", "surface-dim": "#111318", "secondary-fixed-dim": "#d0bcff", "tertiary": "#adc6ff", "primary-container": "#14b8a6", "on-primary": "#003731", "on-secondary-container": "#c4abff", "primary": "#4fdbc8", "inverse-primary": "#006b5f", "surface-container-highest": "#33353a", "error": "#ffb4ab", "tertiary-fixed-dim": "#adc6ff", "on-primary-fixed-variant": "#005048", "on-background": "#e2e2e9", "on-tertiary-container": "#00377d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.75rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin": "2rem", "space-xs": "0.5rem" }, "fontFamily": { "display-hero-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "code-metric": ["JetBrains Mono"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-caps": ["JetBrains Mono"], "code-badge": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "code-metric": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0"><img alt="darkEye Monogram Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XbfpZEYVf-5acFbKXJmebq9EiUz5yZHyJrBjcIIFhn76jVUq_0Pd6BkAlZQuDQROt32NLSdKLsVVjTutyfJGG5L0q2SrDtlTZ-XXoWGXQSBmZ9ogeurD6NEjEy9wmvSA0yqeXZEQRApXWGd_D2rtIAp01sXzgNz_3vJ-cqASvIaaL5wYqctVRsI_Xv5qd_pns_DuJ6jlSNvQnAGUMZDrggN5qipnhqoXKjRTlD4fKJcI1Fc5Rw2B5Wyg0"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-body-md font-bold text-on-surface truncate tracking-tight">Ashraful Islam</span><span class="font-label-caps text-label-caps text-primary tracking-widest font-mono">(darkEye)</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Toggle Navigation Menu" class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary transition-colors" id="drawer-toggle-btn" onclick="document.getElementById('mobile-drawer').classList.toggle('translate-x-full');document.getElementById('drawer-backdrop').classList.toggle('opacity-0');document.getElementById('drawer-backdrop').classList.toggle('pointer-events-none');"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');this.classList.add('opacity-0','pointer-events-none');"></div><aside class="fixed top-0 right-0 z-50 h-full w-[82vw] max-w-[340px] bg-surface-container-low backdrop-blur-2xl p-space-lg flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out shadow-2xl" id="mobile-drawer"><div class="flex flex-col"><div class="flex items-center justify-between pb-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">terminal</span><span class="font-headline-md text-body-md font-bold text-on-surface">Navigation</span></div><button aria-label="Close Drawer" class="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">close</span></button></div><nav class="flex flex-col gap-space-xs mt-space-sm"><a class="min-h-[44px] px-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" href="#about" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-body-md text-body-md">About</span></a><a class="min-h-[44px] px-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" href="#cp" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">code_blocks</span><span class="font-body-md text-body-md">Competitive Programming</span></a><a class="min-h-[44px] px-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" href="#projects" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">deployed_code</span><span class="font-body-md text-body-md">Projects</span></a><a class="min-h-[44px] px-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" href="#skills" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">data_object</span><span class="font-body-md text-body-md">Skills</span></a><a class="min-h-[44px] px-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" href="#achievements" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">military_tech</span><span class="font-body-md text-body-md">Achievements</span></a><a class="min-h-[44px] px-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" href="#contact" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[20px]">alternate_email</span><span class="font-body-md text-body-md">Contact</span></a></nav></div><div class="flex flex-col gap-space-sm pt-space-md"><a class="w-full min-h-[44px] rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-space-xs hover:bg-primary-fixed-dim transition-colors shadow-lg" href="#contact" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[18px]">download</span><span>Download Resume</span></a><a class="w-full min-h-[44px] rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center gap-space-xs transition-colors" href="#contact" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined text-[18px]">send</span><span>Initiate Contact</span></a><span class="font-code-badge text-code-badge text-outline text-center mt-space-xs">// Ashraful Islam © 2026</span></div></aside><main class="flex-1 w-full pt-16 pb-20 bg-surface flex flex-col relative"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-md relative overflow-hidden" id="about">
+<!-- Ambient Luminous Glow (Top-right focal) -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Tagline Badge -->
+<div class="flex items-center gap-space-xs self-start bg-surface-container-low px-space-sm py-1.5 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest font-mono">"Quiet corners hide the best stories."</span>
+</div>
+<!-- Identity & Visual Avatar -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-baseline gap-space-xs flex-wrap">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-surface">Ashraful Islam</h1>
+<span class="font-code-badge text-code-badge text-primary bg-primary-container/20 px-2 py-0.5 rounded-md font-mono">darkEye</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium">Software Engineering Student • Competitive Programmer • Full-stack Builder</p>
+</div>
+<!-- Abstract Geometric Avatar with Soft Teal Aura -->
+<div class="relative flex-shrink-0">
+<div class="absolute inset-0 bg-primary/25 rounded-2xl blur-md"></div>
+<div class="relative w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center overflow-hidden shadow-md">
+<svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewbox="0 0 100 100">
+<polygon opacity="0.6" points="50,15 85,35 85,75 50,95 15,75 15,35" stroke-dasharray="3 3" stroke-width="2.5"></polygon>
+<polygon points="50,26 75,41 75,69 50,84 25,69 25,41" stroke-width="2"></polygon>
+<circle cx="50" cy="50" fill="currentColor" fill-opacity="0.15" r="12" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Brief Bio Narrative -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Final-year Software Engineering student at <span class="text-on-surface font-semibold">SUST</span> holding an academic standing of <span class="text-primary font-semibold">3.91 CGPA</span>. Codeforces Expert (<span class="text-secondary font-mono font-semibold">1715</span>) with over <span class="text-primary font-mono font-semibold">2000+</span> computational challenges solved across global judges. Dedicated to building reliable, high-throughput distributed systems.
+      </p>
+</div>
+<!-- Stacked Action Touch Targets -->
+<div class="flex flex-col gap-space-xs w-full">
+<a class="w-full min-h-[48px] rounded-lg bg-primary-container text-on-primary-container font-headline-md text-body-md font-semibold flex items-center justify-center gap-space-xs hover:bg-primary transition-all shadow-md active:scale-[0.99]" href="#projects">
+<span class="material-symbols-outlined text-[20px]">folder_special</span>
+<span>View Featured Projects</span>
+</a>
+<a class="w-full min-h-[48px] rounded-lg bg-surface-container-low text-on-surface font-headline-md text-body-md font-semibold flex items-center justify-center gap-space-xs hover:bg-surface-container transition-all active:scale-[0.99]" href="#contact">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span>Download Dossier / CV</span>
+</a>
+</div>
+<!-- Social Proof Quick Links -->
+<div class="flex items-center justify-around bg-surface-container-lowest/60 rounded-xl py-space-xs px-space-sm shadow-sm">
+<a aria-label="GitHub Profile" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="https://github.com" rel="noopener" target="_blank">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+</a>
+<a aria-label="LinkedIn Profile" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="https://linkedin.com" rel="noopener" target="_blank">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Codeforces Handle" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-secondary transition-colors" href="https://codeforces.com/profile/darkEye" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code_blocks</span>
+</a>
+<a aria-label="CodeChef Profile" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-tertiary transition-colors" href="https://www.codechef.com/users/voideye" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</a>
+<a aria-label="Email Ashraful" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="mailto:ashrafulislamdarkeye@gmail.com">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</section>
+<!-- STATS & ABOUT -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">query_stats</span>
+<h2 class="font-headline-md text-body-md font-bold uppercase tracking-wider text-on-surface">Key Metrics</h2>
+</div>
+<span class="font-code-badge text-code-badge text-outline font-mono">// verified</span>
+</div>
+<!-- 2x2 Grid of Stat Cards with Sparkles -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Stat 1: CGPA -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col justify-between relative shadow-sm overflow-hidden">
+<!-- 4-point Sparkle SVG -->
+<svg class="absolute top-2.5 right-2.5 w-3.5 h-3.5 text-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<div class="flex flex-col">
+<span class="font-code-metric text-code-metric font-bold text-on-surface tracking-tight">3.91</span>
+<span class="font-label-caps text-label-caps text-outline font-mono uppercase tracking-wider">/ 4.00 CGPA</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary mt-space-xs font-medium">Rank Top 1%</span>
+</div>
+<!-- Stat 2: Major GPA -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col justify-between relative shadow-sm overflow-hidden">
+<div class="flex flex-col">
+<span class="font-code-metric text-code-metric font-bold text-secondary tracking-tight">4.00</span>
+<span class="font-label-caps text-label-caps text-outline font-mono uppercase tracking-wider">Major GPA</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-space-xs font-medium">Core CS Units</span>
+</div>
+<!-- Stat 3: 2000+ Solved -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col justify-between relative shadow-sm overflow-hidden">
+<!-- 4-point Sparkle SVG -->
+<svg class="absolute top-2.5 right-2.5 w-3.5 h-3.5 text-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<div class="flex flex-col">
+<span class="font-code-metric text-code-metric font-bold text-on-surface tracking-tight">2000+</span>
+<span class="font-label-caps text-label-caps text-outline font-mono uppercase tracking-wider">Problems Solved</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary mt-space-xs font-medium">Global Judges</span>
+</div>
+<!-- Stat 4: ICPC Finalist -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col justify-between relative shadow-sm overflow-hidden">
+<!-- 4-point Sparkle SVG -->
+<svg class="absolute top-2.5 right-2.5 w-3.5 h-3.5 text-tertiary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-tertiary tracking-tight leading-tight">Asia-West</span>
+<span class="font-label-caps text-label-caps text-outline font-mono uppercase tracking-wider">Cont. Finalist</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs font-medium">ICPC 2025</span>
+</div>
+</div>
+<!-- Education Dossier Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-mono">Academic Track</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-body-md font-bold text-on-surface">B.Sc. in Software Engineering</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shahjalal University of Science and Technology (SUST)</p>
+</div>
+<div class="flex items-center justify-between text-outline font-mono text-label-caps pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span> 2023 – 2027
+        </span>
+<span class="text-primary font-semibold">Sylhet, Bangladesh</span>
+</div>
+</div>
+</section>
+<!-- COMPETITIVE PROGRAMMING -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-sm" id="cp">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<h2 class="font-headline-md text-body-md font-bold uppercase tracking-wider text-on-surface">Competitive Arena</h2>
+</div>
+<span class="font-code-badge text-code-badge text-secondary font-mono">Algorithms &amp; Graphs</span>
+</div>
+<!-- Dual Platform Profile Showcase -->
+<div class="flex flex-col gap-space-xs">
+<!-- Codeforces Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs">
+<!-- High-Value 4-point SVG sparkle -->
+<svg class="absolute top-3 right-3 w-4 h-4 text-secondary animate-pulse" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-headline-md text-body-md font-bold text-on-surface">Codeforces</span>
+</div>
+<span class="font-code-badge text-code-badge px-2 py-0.5 rounded bg-secondary-container/30 text-secondary font-mono font-bold">Expert • 1715</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-outline font-mono">Handle: <span class="text-on-surface font-semibold">darkEye</span></span>
+<span class="font-label-caps text-label-caps text-outline font-mono">Max: <span class="text-secondary font-bold">1715</span></span>
+</div>
+<!-- Rating Trend Sparkline Visual SVG -->
+<div class="w-full h-12 bg-surface-container-lowest/80 rounded-lg p-1.5 flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 300 40">
+<path class="text-secondary" d="M0,35 Q30,30 60,32 T120,24 T180,28 T240,15 T300,6" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<circle class="fill-secondary" cx="300" cy="6" r="3.5"></circle>
+</svg>
+</div>
+</div>
+<!-- CodeChef Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs">
+<!-- High-Value 4-point SVG sparkle -->
+<svg class="absolute top-3 right-3 w-4 h-4 text-tertiary animate-pulse" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-headline-md text-body-md font-bold text-on-surface">CodeChef</span>
+</div>
+<span class="font-code-badge text-code-badge px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-mono font-bold">4-Star • 1956</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps text-outline font-mono">Handle: <span class="text-on-surface font-semibold">voideye</span></span>
+<span class="font-label-caps text-label-caps text-outline font-mono">Division: <span class="text-tertiary font-bold">Div 1/2</span></span>
+</div>
+<!-- Trend Sparkline SVG -->
+<div class="w-full h-12 bg-surface-container-lowest/80 rounded-lg p-1.5 flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 300 40">
+<path class="text-tertiary" d="M0,32 Q45,28 90,26 T170,18 T230,22 T300,8" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<circle class="fill-tertiary" cx="300" cy="8" r="3.5"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Judge Platforms Horizon -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-badge text-code-badge font-mono">Codeforces</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-badge text-code-badge font-mono">CodeChef</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-badge text-code-badge font-mono">VJudge</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-badge text-code-badge font-mono">AtCoder</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-badge text-code-badge font-mono">LeetCode</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-badge text-code-badge font-mono">CSES</span>
+</div>
+<!-- Regional Contest Highlights Banner -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">emoji_events</span> Inter-University Contest Presence
+      </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Active participant across premier national collegiate programming contests: <span class="text-on-surface font-medium">SUST IUPC (x2)</span>, <span class="text-on-surface font-medium">KUET IUPC</span>, <span class="text-on-surface font-medium">CUET IUPC</span>, <span class="text-on-surface font-medium">UIU IUPC</span>, <span class="text-on-surface font-medium">AUST IUPC</span>, and <span class="text-on-surface font-medium">UU Contest</span>.
+      </p>
+</div>
+</section>
+<!-- FEATURED PROJECTS -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-sm" id="projects">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">deployed_code</span>
+<h2 class="font-headline-md text-body-md font-bold uppercase tracking-wider text-on-surface">Featured Works</h2>
+</div>
+<span class="font-code-badge text-code-badge text-outline font-mono">04 items</span>
+</div>
+<!-- Project 1: SustCafeteria -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist UI mockup of a university cafeteria meal order and token management web dashboard with dark slate background, luminous teal interface highlights, responsive mobile grid layout, and crisp typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpP4foyAcDv7i5ZlwrdLnuIW1Qbh_5zgcDda4eAVcatK9MCy3qqVhosBWZjdz-8NRVp0ZT_ASKjC-TbzsNVyS8C3ywSY021XP8JQSnEbPP61lxD-lnvCWg9njQeTVChcDucgK194Pm36voLFg5JO4eyKsAMrDNXGm2jWuyFal4dZviULF_tg9vxH4DF50etCaRvvCf5nJQIzSOiGIEmKRUxn4xI-MlwLr2AUC0P2g7gSLHkA0IKGkQ"/>
+<span class="absolute top-2.5 left-2.5 font-label-caps text-label-caps bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded text-primary font-mono uppercase tracking-wider">Campus Ecosystem</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-body-md font-bold text-on-surface">SustCafeteria</h3>
+<span class="material-symbols-outlined text-primary text-[18px]">restaurant</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full-stack digitized cafeteria ticketing, coupon verification, and inventory control engine built specifically for SUST student halls.</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">React</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Node.js</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Express</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">MySQL</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Docker</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 min-h-[44px] rounded-lg bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold flex items-center justify-center gap-1 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Case Study
+        </button>
+<button class="flex-1 min-h-[44px] rounded-lg bg-surface-container text-on-surface font-headline-md text-body-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[16px]">code</span> Source Code
+        </button>
+</div>
+</div>
+<!-- Project 2: Plan2Go -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="High-tech intelligent travel planner application visual on a dark glassy tablet display with glowing teal interactive travel route lines, AI generated schedules, calendar widgets, and clean modern aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_yBwXvRCpwewldSXoS3JXm55FUVFiXNI7rU6pbqLl8mODgk5FqxwZ9psSPslmaWBmPa5YJkrl1vW0VbINciugdar3ICCpucdQuhrygsq8urKlNXUI9075sjuIUStJZ0BhbH_Vpr8i16YMszUumAiv-2Bw4W8moAbEtv4J-XkuPgAXFXKwN7J2M2otAFQ5a5j3HBjFvTpqbDyItEWtthmUw5Q-LbRQuZhlnKLD9DMa-x0msKAtu4-N"/>
+<span class="absolute top-2.5 left-2.5 font-label-caps text-label-caps bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded text-tertiary font-mono uppercase tracking-wider">AI Travel Intelligence</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-body-md font-bold text-on-surface">Plan2Go</h3>
+<span class="material-symbols-outlined text-tertiary text-[18px]">travel_explore</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated personalized travel itinerary planner orchestrated with high-speed Go services and conversational Gemini API pipelines.</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">React</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Go (Golang)</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">MySQL</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Gemini API</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="w-full min-h-[44px] rounded-lg bg-surface-container text-on-surface font-headline-md text-body-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[16px]">code</span> Explore Architecture
+        </button>
+</div>
+</div>
+<!-- Project 3: TransactionManager -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="relative w-full h-36 rounded-xl overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Dark themed mobile smartphone screen exhibiting personal finance analytics with dynamic bar charts, smooth balance progress gauges, teal and lavender accent lines, rendered in clean Android Material 3 design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr1DmExHJ_ORHus0OOKYy7Wj8LZVtrdfI40DHGHslxHrdI7cY66B-WdsodAVH2lpcb3E2o0c6ge9RgvO_BVSTx55C4vQiecCXwDsb61kkQnGRD4qY8ozGIrJKgD8JzM26fjFjTrUNy3QEhvWnBHCQxTvCPMjbUaNoQaHswRddRn4XjyXYg2FXkWoBVja3GSB9slKiM9qXAgKGMJlNwwiWrq194Pm0iQn3WYZU64lTjWqq59LpRhcnN"/>
+<span class="absolute top-2.5 left-2.5 font-label-caps text-label-caps bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded text-secondary font-mono uppercase tracking-wider">Android • FinTech</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-body-md font-bold text-on-surface">TransactionManager</h3>
+<span class="material-symbols-outlined text-secondary text-[18px]">account_balance_wallet</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Native Android application for real-time expenditure logging, category allocation, and multi-currency reporting with zero cloud latency.</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Kotlin</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Firebase</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">MPAndroidChart</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="w-full min-h-[44px] rounded-lg bg-surface-container text-on-surface font-headline-md text-body-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span> Repository
+        </button>
+</div>
+</div>
+<!-- Project 4: JungleRush -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-body-md font-bold text-on-surface">JungleRush</h3>
+<span class="material-symbols-outlined text-primary text-[18px]">sports_esports</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2D arcade obstacle survivor game featuring physics calculations, custom sprite collision matrices, and cloud-backed leaderboard sync.</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">Java</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">LibGDX</span>
+<span class="font-code-badge text-code-badge text-outline bg-surface-container px-2 py-0.5 rounded font-mono">MongoDB</span>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="w-full min-h-[44px] rounded-lg bg-surface-container text-on-surface font-headline-md text-body-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[16px]">sports_esports</span> View Game Engine Repo
+        </button>
+</div>
+</div>
+</section>
+<!-- SKILLS & PROFICIENCIES -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-sm" id="skills">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">data_object</span>
+<h2 class="font-headline-md text-body-md font-bold uppercase tracking-wider text-on-surface">Technical Stack</h2>
+</div>
+<span class="font-code-badge text-code-badge text-outline font-mono">Proficiencies</span>
+</div>
+<!-- Skill Clouds -->
+<div class="flex flex-col gap-space-xs">
+<!-- Languages -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-mono">Languages</span>
+<div class="flex flex-wrap gap-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">C++</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Java</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Python</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Go (Golang)</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Kotlin</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">JavaScript / TS</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">SQL</span>
+</div>
+</div>
+<!-- Frameworks -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-mono">Frameworks &amp; Runtimes</span>
+<div class="flex flex-wrap gap-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">React</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Node.js</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Express</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">LibGDX</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Android SDK</span>
+</div>
+</div>
+<!-- Databases & Cloud -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-tertiary font-mono">Databases &amp; Cloud</span>
+<div class="flex flex-wrap gap-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">MySQL</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">MongoDB</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Firebase</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Docker</span>
+</div>
+</div>
+<!-- Tools & Principles -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-outline font-mono">Tools &amp; Principles</span>
+<div class="flex flex-wrap gap-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Git &amp; GitHub</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Linux / Bash</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Data Structures</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">Graph Theory</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge font-mono">OOP &amp; System Design</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HONORS & ACHIEVEMENTS -->
+<section class="px-gutter-mobile py-space-sm flex flex-col gap-space-sm" id="achievements">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">military_tech</span>
+<h2 class="font-headline-md text-body-md font-bold uppercase tracking-wider text-on-surface">Honors &amp; Awards</h2>
+</div>
+<span class="font-code-badge text-code-badge text-primary font-mono">// distinction</span>
+</div>
+<!-- Featured ICPC Asia-West Continent Finalist 2025 Card with Sparkles -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-md relative overflow-hidden flex flex-col gap-space-xs">
+<!-- 4-point SVG sparkle top right -->
+<svg class="absolute top-3.5 right-3.5 w-5 h-5 text-primary animate-pulse" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<!-- 4-point SVG sparkle bottom left -->
+<svg class="absolute bottom-3 left-3 w-3 h-3 text-secondary opacity-70" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+<span class="font-code-badge text-code-badge bg-primary-container/20 text-primary px-2 py-0.5 rounded font-mono font-bold">Featured Milestone</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">ICPC Asia-West Continent Finalist</h3>
+<p class="font-body-md text-body-md text-primary font-medium">Contest Year 2025</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-1">
+        Qualified through grueling regional heats to represent SUST among the top computational collegiate teams in the Asia-West continent.
+      </p>
+</div>
+<!-- Regional Achievements Timeline List -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-outline font-mono">Collegiate Timeline</span>
+<div class="flex items-start gap-space-sm">
+<div class="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">SUST IUPC 2024 &amp; 2023 Qualifier</span>
+<span class="font-label-caps text-label-caps text-outline font-mono">Institutional Contender • Ranked High Tier</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-2 h-2 rounded-full bg-secondary mt-1.5 flex-shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">KUET &amp; CUET IUPC National Rounds</span>
+<span class="font-label-caps text-label-caps text-outline font-mono">Onsite Contestant • Advanced Algorithmic Division</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">Dean’s Honor Award (SUST)</span>
+<span class="font-label-caps text-label-caps text-outline font-mono">Academic Excellence for Consecutive Semesters (3.91 CGPA)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK CONTACT & ENGAGEMENT -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-sm" id="contact">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">alternate_email</span>
+<h2 class="font-headline-md text-body-md font-bold uppercase tracking-wider text-on-surface">Initiate Dispatch</h2>
+</div>
+<span class="font-code-badge text-code-badge text-primary font-mono">// online</span>
+</div>
+<!-- Contact Container -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Available for software engineering roles, distributed systems challenges, and competitive programming initiatives.
+        </p>
+<div class="flex items-center gap-space-xs pt-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<a class="font-code-badge text-code-badge font-mono hover:underline truncate" href="mailto:ashrafulislamdarkeye@gmail.com">ashrafulislamdarkeye@gmail.com</a>
+</div>
+</div>
+<!-- Quick Message Form -->
+<form class="flex flex-col gap-space-xs" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline font-mono uppercase">Full Name</label>
+<input class="w-full min-h-[44px] px-space-sm rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Dr. Alan Turing" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline font-mono uppercase">Work Email</label>
+<input class="w-full min-h-[44px] px-space-sm rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="recruiter@engineering.org" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline font-mono uppercase">Query / Proposal</label>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-colors resize-none" placeholder="Let's build reliable distributed infrastructure together..." required="" rows="3"></textarea>
+</div>
+<button class="mt-space-xs w-full min-h-[48px] rounded-lg bg-primary text-on-primary font-headline-md text-body-md font-semibold flex items-center justify-center gap-space-xs hover:bg-primary-fixed-dim transition-all active:scale-[0.99] shadow-md" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Send Transmission</span>
+</button>
+<div class="hidden mt-2 p- space-sm rounded-lg bg-primary-container/20 text-primary font-body-sm text-body-sm text-center" id="form-feedback">
+          Message received. darkEye will respond within 24 hours.
+        </div>
+</form>
+</div>
+</section>
+</div>
+<script>
+  // Simple bottom tab sync micro-interaction
+  document.querySelectorAll('nav[data-active-classes] a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      document.querySelectorAll('nav[data-active-classes] a').forEach(el => {
+        el.classList.remove('text-primary', 'font-semibold');
+        el.classList.add('text-on-surface-variant');
+      });
+      this.classList.add('text-primary', 'font-semibold');
+      this.classList.remove('text-on-surface-variant');
+    });
+  });
+</script><footer class="w-full py-space-lg px-gutter-mobile flex flex-col items-center justify-center gap-space-xs bg-surface-container-lowest text-center"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[14px]">auto_awesome</span><span class="font-code-badge text-code-badge text-on-surface-variant">Crafted with computational precision</span></div><p class="font-label-caps text-label-caps text-outline tracking-wider">© 2026 Ashraful Islam. All rights reserved.</p></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.2)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-sm flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] transition-colors text-primary font-semibold" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">overview</span><span class="font-label-caps text-label-caps">Overview</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="algorithms" href="#"><span class="material-symbols-outlined text-[20px]">code_blocks</span><span class="font-label-caps text-label-caps">CP / Algo</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="works" href="#"><span class="material-symbols-outlined text-[20px]">folder_code</span><span class="font-label-caps text-label-caps">Works</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile-dossier" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-caps text-label-caps">Dossier</span></a></div></nav></body></html>

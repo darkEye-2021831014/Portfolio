@@ -1,0 +1,17 @@
+{
+  "name": "Ashraful Islam (darkEye) — Portfolio",
+  "short_name": "darkEye",
+  "description": "Final-year Software Engineering student at SUST. Codeforces Expert, CodeChef 4★. Portfolio of Ashraful Islam.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0e13",
+  "theme_color": "#0c0e13",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

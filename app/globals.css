@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens — single source of truth.
+ * Values mirror `design/desktop/code.html` (the user-mandated canonical
+ * source) and `tailwind.config.ts`. They are exposed as CSS custom
+ * properties so non-Tailwind consumers (inline SVGs, third-party widgets)
+ * can read them.
+ */
+:root {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* surfaces */
+  --color-canvas: #0c0e13;
+  --color-surface-container-lowest: #0c0e13;
+  --color-surface-container-low: #1a1b21;
+  --color-surface-container: #1e1f25;
+  --color-surface-container-high: #282a2f;
+  --color-surface-container-highest: #33353a;
+  --color-surface: #111318;
+  --color-surface-bright: #37393f;
+  --color-surface-variant: #33353a;
+
+  /* text */
+  --color-on-surface: #e2e2e9;
+  --color-on-surface-variant: #bbcac6;
+  --color-on-background: #e2e2e9;
+  --color-inverse-surface: #e2e2e9;
+  --color-inverse-on-surface: #2e3036;
+  --color-inverse-primary: #006b5f;
+  --color-outline: #859490;
+  --color-outline-variant: #3c4947;
+  /* Tertiary text colour from design/DESIGN.md — used for understated
+   * labels and grid lines. Sits between --color-outline and
+   * --color-on-surface-variant on the luminance scale. */
+  --color-tertiary-text: #64748b;
+
+  /* primary */
+  --color-primary: #4fdbc8;
+  --color-primary-container: #14b8a6;
+  --color-on-primary: #003731;
+  --color-on-primary-container: #00423b;
+  --color-primary-fixed: #71f8e4;
+  --color-primary-fixed-dim: #4fdbc8;
+  --color-on-primary-fixed: #00201c;
+  --color-on-primary-fixed-variant: #005048;
+
+  /* secondary */
+  --color-secondary: #d0bcff;
+  --color-secondary-container: #571bc1;
+  --color-on-secondary: #3c0091;
+  --color-on-secondary-container: #c4abff;
+
+  /* tertiary */
+  --color-tertiary: #adc6ff;
+  --color-tertiary-container: #75a3ff;
+  --color-on-tertiary: #002e6a;
+  --color-on-tertiary-container: #00377d;
+
+  /* error */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* platform-specific brand colors (used by PlatformRatingChip) */
+  --color-codeforces: #3b82f6;
+  --color-codechef: #d97706;
+
+  /* spacing + radius */
+  --space-gutter: 1.5rem;
+  --space-gutter-mobile: 1rem;
+  --space-margin: 2rem;
+  --space-margin-mobile: 1rem;
+
+  /* glow tokens */
+  --glow-teal: rgba(20, 184, 166, 0.18);
+  --glow-teal-strong: rgba(20, 184, 166, 0.35);
+  --glow-violet: rgba(139, 92, 246, 0.18);
+  --glow-cyan: rgba(45, 212, 191, 0.35);
+
+  /* motion */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 500ms;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+    background-color: var(--color-canvas);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+  }
+  /* first/last child of <main> hug the wrapper */
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+  /* Offset every section that is a navigation target so anchor jumps
+   * land below the fixed 64px header (and the mobile bottom-tab nav
+   * doesn't get a phantom overlap). */
+  section[id] {
+    scroll-margin-top: 96px;
+  }
+
+  /* Accessible focus ring for any keyboard-focused element. We avoid
+   * a global outline:0 and instead layer a 2px primary-tinted ring
+   * with a 2px canvas-tinted offset so it's visible on every surface.
+   * This is the standard "M3 focus indicator" pattern. */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+  /* Buttons and links inherit a soft inner shadow ring so the brand
+   * colour reads on darker containers. */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline-color: var(--color-primary);
+    outline-offset: 3px;
+  }
+  /* Skip-link is hidden by default; becomes visible on focus. */
+  .skip-link {
+    position: absolute;
+    left: -10000px;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    font-weight: 600;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+  }
+}
+
+@layer utilities {
+  /* hide the scrollbar while keeping scroll behaviour (used by the
+   * fixed-header + mobile nav to avoid a flash) */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .text-shadow-soft {
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ----------------------------------------------------------------
+   * Motion: section fade-up
+   * ----------------------------------------------------------------
+   * Sections start hidden + nudged down 24px, then animate to visible
+   * once the observer (lib/motion.ts) toggles the `is-visible` class.
+   * The animation is intentionally short (500ms) and uses an
+   * ease-out-expo curve so it feels like content arriving, not a
+   * "wow" effect. prefers-reduced-motion completely disables it. */
+  .motion-fade-up {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition:
+      opacity var(--duration-slow) var(--ease-out-expo),
+      transform var(--duration-slow) var(--ease-out-expo);
+    will-change: opacity, transform;
+  }
+  .motion-fade-up.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  /* Children can opt into a delayed reveal (the IntersectionObserver
+   * uses an array of child refs to stagger them). */
+  .motion-fade-up.is-visible > .motion-stagger {
+    transition-delay: 80ms;
+  }
+  .motion-fade-up.is-visible > .motion-stagger:nth-child(2) {
+    transition-delay: 160ms;
+  }
+  .motion-fade-up.is-visible > .motion-stagger:nth-child(3) {
+    transition-delay: 240ms;
+  }
+  .motion-fade-up.is-visible > .motion-stagger:nth-child(4) {
+    transition-delay: 320ms;
+  }
+
+  /* Sparkle twinkle: gentle scale + opacity loop for inline SVGs. */
+  @keyframes sparkle-twinkle {
+    0%,
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 0.85;
+    }
+    50% {
+      transform: scale(1.15) rotate(8deg);
+      opacity: 1;
+    }
+  }
+  .motion-twinkle {
+    animation: sparkle-twinkle 2.4s var(--ease-out-quart) infinite;
+    transform-origin: center;
+  }
+
+  /* ----------------------------------------------------------------
+   * Reduced motion: disable ALL transitions, animations, and the
+   * fade-up's initial hidden state. Users with this preference set
+   * see the final layout immediately with no movement. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .motion-fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .motion-twinkle {
+      animation: none !important;
+    }
+  }
+}
